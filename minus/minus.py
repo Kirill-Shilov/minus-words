@@ -52,4 +52,4 @@ if __name__ == "__main__":
                 if word is not False:
                     rf.write('{}{}'.format(word, '\n'))
     except:
-        print('python3 minus.py file_for_clearing minus_words_file')
+        print('/minus_words$ python3 minus/minus.py file_for_clearing minus_words_file')
