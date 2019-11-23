@@ -8,9 +8,8 @@ class Minus_words:
 
     def __init__(self, filename, minus_words):
         self.filename = filename
-        self.minus_words = minus_words
         self.tree = KeywordTree(case_insensitive=True)
-        for word in self.minus_words:
+        for word in minus_words:
             self.tree.add(word)
         self.tree.finalize()
 
