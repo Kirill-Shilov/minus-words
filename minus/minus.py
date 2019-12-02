@@ -14,11 +14,11 @@ class Minus_words:
         self.tree.finalize()
 
     def minus(self):
-        pool = ThreadPool()
-        self.pre_result = pool.map(self._minus_function, self.filename)
+        self.pool = ThreadPool()
+        self.pre_result = self.pool.map(self._minus_function, self.filename)
         self.result = filter(None, self.pre_result)
-        pool.close()
-        pool.join()
+        self.pool.close()
+        self.pool.join()
         return(self.result)
 
     def _minus_function(self, word):
